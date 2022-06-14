@@ -1,14 +1,3 @@
-// import React from 'react'
-
-// const PhysicalVideo = () => {
-//   return (
-//     <div>PhysicalVideo</div>
-//   )
-// }
-
-// export default PhysicalVideo
-
-
 import React, { useState, useEffect } from "react";
 import {
   collection,
@@ -24,7 +13,6 @@ import {
   ref,
   uploadBytesResumable,
   getDownloadURL,
-  deleteObject,
 } from "firebase/storage";
 import { storage, db } from "../../../firebase";
 import { toast } from "react-toastify";

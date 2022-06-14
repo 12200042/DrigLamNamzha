@@ -44,21 +44,21 @@ const AddContact = ({ id, setContactId }) => {
     setEmail("");
   };
 
-  const editHandler = async () => {
-    setMessage("");
-    try {
-      const docSnap = await ContactUsDataService.getContact(id);
-      console.log("the record is :", docSnap.data());
-      setName(docSnap.data().name);
-      setPhone_Number(docSnap.data().phone_number);
-      setEmail(docSnap.data().email);
-      setStatus(docSnap.data().status);
-    } catch (err) {
-      setMessage({ error: true, msg: err.message });
-    }
-  };
-
+ 
   useEffect(() => {
+    const editHandler = async () => {
+      setMessage("");
+      try {
+        const docSnap = await ContactUsDataService.getContact(id);
+        console.log("the record is :", docSnap.data());
+        setName(docSnap.data().name);
+        setPhone_Number(docSnap.data().phone_number);
+        setEmail(docSnap.data().email);
+        setStatus(docSnap.data().status);
+      } catch (err) {
+        setMessage({ error: true, msg: err.message });
+      }
+    };
     console.log("The id here is : ", id);
     if (id !== undefined && id !== "") {
       editHandler();

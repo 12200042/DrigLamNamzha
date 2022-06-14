@@ -1,16 +1,15 @@
 import "./quoAnsNew.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
-import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
-import { useEffect, useState } from "react";
-import { collection, addDoc, doc, setDoc, Timestamp, serverTimestamp } from "firebase/firestore";
 
-import { auth, db, storage } from "../../firebase";
+import { useEffect, useState } from "react";
+
+import {storage } from "../../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { useNavigate}  from "react-router-dom";
 
 const QuoAnsNew = ({ inputs, title }) => {
-  const [file, setFile] = useState("");
+  const [file] = useState("");
   const [data, setData] = useState({});
   const [per, setPerc] = useState(null);
   const navigate =useNavigate()
@@ -59,10 +58,10 @@ const QuoAnsNew = ({ inputs, title }) => {
   const handleAdd = async (e) => {
     e.preventDefault();
     try{
-    const res = await addDoc(collection(db, "Question"),{
-      ...data,
-      timeStamp: serverTimestamp(),
-    });
+    // const res = await addDoc(collection(db, "Question"),{
+    //   ...data,
+    //   timeStamp: serverTimestamp(),
+    // });
     navigate(-1)
   } catch(err){
     console.log(err)

@@ -4,25 +4,21 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  Navigate,
 } from "react-router-dom";
 import { List } from "./pages/list/List";
 import { MentalList } from "./pages/list/MentalList";
 import New from "./pages/new/New";
 
 import MentalNew from "./pages/new/MentalNew";
-import { Single } from "./pages/single/Single";
 import { userInputs } from "../src/formSource/formSource";
 import { usersInputs } from "../src/formSource/MentalFormSource";
 import { userInput } from "../src/formSource/VerbalFormSource";
 import "./components/style/dark.scss"
 import { useContext } from "react";
-import { AuthContext } from "./components/context/AuthContext";
 import { DarkModeContext } from "./components/context/darkModeContext";
 import { Category } from "./pages/category/Category";
 import VerbalList from "./pages/list/VerbalList";
 import VerbalNew from "./pages/new/VerbalNew";
-// import { MentalSingle } from "./pages/single/MentalSingle";
 import { VideoCategory } from "./pages/VideoCategory/VideoCategory"
 import PhysicalVideo from "./pages/VideoCategory/physical/PhysicalVideo";
 import VerbalVideo from "./pages/VideoCategory/verbal/VerbalVideo";

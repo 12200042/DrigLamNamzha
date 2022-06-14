@@ -1,8 +1,6 @@
 import "./sidebar.scss";
-import DashboardIcon from '@mui/icons-material/Dashboard';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
-// import PhotoSizeSelectActualIcon from '@mui/icons-material/PhotoSizeSelectActual';
 import ContactMailOutlinedIcon from '@mui/icons-material/ContactMailOutlined';
 import LogoutIcon from '@mui/icons-material/Logout';
 import AutoStoriesOutlinedIcon from '@mui/icons-material/AutoStoriesOutlined';

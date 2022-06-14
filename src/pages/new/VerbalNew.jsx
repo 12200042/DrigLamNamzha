@@ -3,8 +3,7 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
 import { useEffect, useState } from "react";
-import { collection, addDoc, doc, setDoc, Timestamp, serverTimestamp } from "firebase/firestore";
-import { auth, db, storage } from "../../firebase";
+import { storage } from "../../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { useNavigate}  from "react-router-dom";
 
@@ -57,31 +56,14 @@ const VerbalNew = ({ inputs, title }) => {
   const handleAdd = async (e) => {
     e.preventDefault();
     try{
-    const res = await addDoc(collection(db, "verbal"),{
-      // title :"education",
-      // cheytam : "importances of education",
-      // description : "need of education for all",
-      ...data,
-      timeStamp: serverTimestamp(),
-    });
+    // const res = await addDoc(collection(db, "verbal"),{
+    //   ...data,
+    //   timeStamp: serverTimestamp(),
+    // });
     navigate(-1)
   } catch(err){
     console.log(err)
   }
-    // try {
-    //   const res = await createUserWithEmailAndPassword(
-    //     auth,
-    //     data.email,
-    //     data.password
-    //   );
-    //   await setDoc(doc(db, "users", res.user.uid), {
-    //     ...data,
-    //     timeStamp: serverTimestamp(),
-    //   });
-    //   navigate(-1)
-    // } catch (err) {
-    //   console.log(err)
-    // }
   };
   return (
     <div className="new">

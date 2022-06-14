@@ -1,6 +1,5 @@
 import "./navbar.scss"
 import Diamond from '../../image/download.jpg';
-import SearchIcon from '@mui/icons-material/Search';
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import ListOutlinedIcon from '@mui/icons-material/ListOutlined';

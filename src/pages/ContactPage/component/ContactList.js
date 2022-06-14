@@ -1,6 +1,6 @@
 import "./contactList.scss";
 import React, { useEffect, useState } from "react";
-import { Table, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import ContactUsDataService from "../../ContactPage/services/ContactService";
 
 const ContactList = ({ getContactId }) => {
