@@ -29,7 +29,7 @@ export const Login = () => {
   return (
     <div className="login">
       <form onSubmit={handleLogin}>
-        <h2>Login</h2>
+        <h3>Login</h3>
         <input type="email" placeholder="email" onChange={(e) => setEmail(e.target.value)} />
         <input type="password" placeholder="password" onChange={(e) => setPassword(e.target.value)} />
         <button type="submit">Login</button>
