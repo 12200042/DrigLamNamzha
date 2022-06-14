@@ -1,0 +1,19 @@
+// .header{
+//     text-align: center;
+// }
+// .first{
+//     padding-left: 20px;
+//     // padding-bottom: 20px;
+// }
+// .second{
+//     padding-bottom: 20px;
+//     padding-left: 20px;
+// }
+
+.list{
+    display: flex;
+    width: 100%;
+    .listContainer{
+        flex: 6;
+    }
+}

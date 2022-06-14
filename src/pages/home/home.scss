@@ -1,0 +1,52 @@
+.home{
+    display: flex;
+    .homeContainer{
+        flex: 6;
+        .widgets, .charts{
+           display: flex; 
+           padding: 20px;
+           gap: 20px;
+        }
+    }
+}
+
+.rental{
+    // padding-left: 300px;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 30px;
+}
+.below{
+    // padding-left: 25px;
+    padding-top: 20px;
+    text-align: center;
+}
+.goToImage{
+    text-align: center;
+    padding-top: 10px;
+    border: 1px solid;
+    padding-bottom: 5px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 10px;
+    background-color: cadetblue;
+    border-radius: 20px;
+    
+}
+
+.link{
+    text-align: center;
+    font-size: 12px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    
+}
+.image{
+    text-align: center;
+}
+.avatars{
+    width: 600px;
+    height: 500px;
+    border-radius: 50%;
+ 
+ }
