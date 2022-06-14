@@ -30,14 +30,8 @@ export const Login = () => {
     <div className="login">
       <form onSubmit={handleLogin}>
         <h2>Login</h2>
-        <input
-          type="email"
-          placeholder="email"
-          onChange={(e) => setEmail(e.target.value)} />
-        <input
-          type="password"
-          placeholder="password"
-          onChange={(e) => setPassword(e.target.value)} />
+        <input type="email" placeholder="email" onChange={(e) => setEmail(e.target.value)} />
+        <input type="password" placeholder="password" onChange={(e) => setPassword(e.target.value)} />
         <button type="submit">Login</button>
         {error && <span>Wrong email or password!</span>}
       </form>
