@@ -8,20 +8,20 @@ import Silver from '../../image/book.jpg'
 export const Home = () => {
   return (
     <div className="home">
-      <Sidebar/>
+      <Sidebar />
       <div className="homeContainer">
-        <Navbar/>
+        <Navbar />
         <div className="widgets">
-          <Widget type="user"/>
-          <Widget type="image"/>
-          <Widget type="video"/> 
+          <Widget type="user" />
+          <Widget type="image" />
+          <Widget type="video" />
         </div>
         {/* <div className="charts">
           <Featured/>
           <Chart/>
         </div> */}
 
-<div >
+        <div >
           <h2 className="rental">Driglam Namzha application can be access from everywhere!</h2>
 
         </div>
@@ -38,7 +38,7 @@ export const Home = () => {
         </Link>
         <div className="link">For more the above button</div>
       </div>
-      </div>
+    </div>
   )
 }
 
