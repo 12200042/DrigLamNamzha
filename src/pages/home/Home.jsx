@@ -22,7 +22,7 @@ export const Home = () => {
         </div> */}
 
 <div >
-          <h2 className="rental">TDriglam Namzha application can be access from everywhere!</h2>
+          <h2 className="rental">Driglam Namzha application can be access from everywhere!</h2>
 
         </div>
         <div className="image">
