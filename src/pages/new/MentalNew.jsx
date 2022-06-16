@@ -3,9 +3,9 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
 import { useEffect, useState } from "react";
-
-import {storage } from "../../firebase";
-// import { createUserWithEmailAndPassword } from "firebase/auth";
+import { addDoc, collection,serverTimestamp } from "firebase/firestore";
+import { db } from "../../firebase";
+import { storage } from "../../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { useNavigate}  from "react-router-dom";
 
@@ -57,28 +57,14 @@ const MentalNew = ({ inputs, title }) => {
   const handleAdd = async (e) => {
     e.preventDefault();
     try{
-    // const res = await addDoc(collection(db, "mental"),{
-    //   ...data,
-    //   timeStamp: serverTimestamp(),
-    // });
+      await addDoc(collection(db, "Mental"),{
+      ...data,
+      timeStamp: serverTimestamp(),
+    });
     navigate(-1)
   } catch(err){
     console.log(err)
   }
-    // try {
-    //   const res = await createUserWithEmailAndPassword(
-    //     auth,
-    //     data.email,
-    //     data.password
-    //   );
-    //   await setDoc(doc(db, "users", res.user.uid), {
-    //     ...data,
-    //     timeStamp: serverTimestamp(),
-    //   });
-    //   navigate(-1)
-    // } catch (err) {
-    //   console.log(err)
-    // }
   };
   return (
     <div className="new">

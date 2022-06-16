@@ -6,8 +6,8 @@ import { useEffect, useState } from "react";
 import { storage } from "../../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { useNavigate}  from "react-router-dom";
-
-
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { db } from "../../firebase";
 const VerbalNew = ({ inputs, title }) => {
   const [file, setFile] = useState("");
   const [data, setData] = useState({});
@@ -56,10 +56,10 @@ const VerbalNew = ({ inputs, title }) => {
   const handleAdd = async (e) => {
     e.preventDefault();
     try{
-    // const res = await addDoc(collection(db, "verbal"),{
-    //   ...data,
-    //   timeStamp: serverTimestamp(),
-    // });
+    await addDoc(collection(db, "verbal"),{
+      ...data,
+      timeStamp: serverTimestamp(),
+    });
     navigate(-1)
   } catch(err){
     console.log(err)

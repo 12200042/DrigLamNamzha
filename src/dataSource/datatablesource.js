@@ -2,7 +2,7 @@ export const userColumns = [
     {field: "id", headerName: "ID", width: 200},{
         field :"image",
         headerName:"Image",
-        width:300,
+        width:100,
         renderCell:(params)=>{
             return (
                 <div className="cellWithImg">
@@ -13,9 +13,16 @@ export const userColumns = [
         },
     },
     {
-        field:"name",
-        headerName:"Name"
+        field:"Name",
+        headerName:"Name",
+        width:300,
     },
+    {
+        field:"type",
+        headerName:"type",
+        width:200,
+    },
+
     {
         field:"description",
         headerName:"Description",

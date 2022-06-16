@@ -3,7 +3,8 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 
 import { useEffect, useState } from "react";
-
+import { addDoc,serverTimestamp,collection } from "firebase/firestore";
+import { db } from "../../firebase";
 import {storage } from "../../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { useNavigate}  from "react-router-dom";
@@ -58,10 +59,14 @@ const QuoAnsNew = ({ inputs, title }) => {
   const handleAdd = async (e) => {
     e.preventDefault();
     try{
-    // const res = await addDoc(collection(db, "Question"),{
-    //   ...data,
-    //   timeStamp: serverTimestamp(),
-    // });
+
+
+    await addDoc(collection(db, "Question"),{
+      ...data,
+      timeStamp: serverTimestamp(),
+    });
+
+
     navigate(-1)
   } catch(err){
     console.log(err)

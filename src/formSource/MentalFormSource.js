@@ -5,6 +5,7 @@ export const usersInputs=[
         type:"text",
         placeholder:"Name",
     },
+ 
 
     {
         id: "description",

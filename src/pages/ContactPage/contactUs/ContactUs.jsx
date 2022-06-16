@@ -19,7 +19,7 @@ export const ContactUs = () => {
       <Sidebar />
       <div className="listContainer">
         <Navbar />
-        <div className="header">Contact Us Page </div>
+        <div className="header">Contact Us Page  </div>
         <div className="contactUs">
           <Container style={{ width: "500px" }}>
             <Row className="row">

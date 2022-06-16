@@ -90,12 +90,8 @@ export default function PhysicalVideo() {
   }, []);
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this video?")) {
-      try {
-        await deleteDoc(doc(db, "Videos", id));
-        setVideos(videos.filter((item) => item.id !== id));
-      } catch (error) {
-        console.log(error);
-      }
+      const userDoc = doc(db, "PhysicalVideos", id);
+      await deleteDoc(userDoc);
     }
   };
   return (

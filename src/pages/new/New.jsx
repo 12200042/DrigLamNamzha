@@ -3,8 +3,9 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
 import { useEffect, useState } from "react";
-
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { storage } from "../../firebase";
+import { db } from "../../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { useNavigate}  from "react-router-dom";
 
@@ -56,10 +57,10 @@ const New = ({ inputs, title }) => {
   const handleAdd = async (e) => {
     e.preventDefault();
     try{
-    // const res = await addDoc(collection(db, "Physical"),{
-    //   ...data,
-    //   timeStamp: serverTimestamp(),
-    // });
+    await addDoc(collection(db, "Physical"),{
+      ...data,
+      timeStamp: serverTimestamp(),
+    });
     navigate(-1)
   } catch(err){
     console.log(err)

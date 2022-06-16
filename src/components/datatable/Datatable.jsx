@@ -30,12 +30,14 @@ const Datatable = () => {
   }, []);
 
   const handleDelete = async (id) => {
+    if(window.confirm("Are you sure you want to delete ?")){
     try {
       await deleteDoc(doc(db, "Physical", id));
       setData(data.filter((item) => item.id !== id));
     } catch (err) {
       console.log(err)
     }
+  }
   };
     const actionColumn = [
         {

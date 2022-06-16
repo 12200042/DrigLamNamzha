@@ -16,8 +16,10 @@ const ContactList = ({ getContactId }) => {
   };
 
   const deleteHandler = async (id) => {
+    if(window.confirm("Are you sure you want to delete ?")){
     await ContactUsDataService.deleteContact(id);
     getContact();
+    }
   };
   return (
     <>

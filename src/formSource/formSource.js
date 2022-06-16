@@ -1,9 +1,15 @@
 export const userInputs=[
     {
-        id: "name",
+        id: "Name",
         label:"Name",
         type:"text",
         placeholder:" Name",
+    },
+    {
+        id: "type",
+        label:"type",
+        type:"text",
+        placeholder:"sitting",
     },
 
     {

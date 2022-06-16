@@ -6,6 +6,12 @@ export const userInput = [
       placeholder: "name of image",
     },
     {
+      id:"type",
+      label:"type",
+      type:"text",
+      placeholder:"type"
+    },
+    {
       id: "description",
       label: "Description",
       type: "text",
